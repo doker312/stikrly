@@ -34,7 +34,7 @@ const ResultsSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl mb-3">100% Real, Verified Client Growth.</h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-            Don't take our word for it. Here are the actual numbers and ROAS pulled straight from our active Meta and Google ad accounts. We turn your ad spend into profitable, scalable revenue.
+            All results are from live Meta & Google dashboards. We’re happy to walk you through them on a call.
           </p>
         </motion.div>
 
