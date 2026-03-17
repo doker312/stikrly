@@ -21,25 +21,27 @@ const LeadForm = () => {
     
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     
-    // Submit to Google Sheets via Webhook
+    // Submit to Web3Forms
     try {
-      if (import.meta.env.VITE_GOOGLE_SHEETS_URL) {
-        await fetch(import.meta.env.VITE_GOOGLE_SHEETS_URL, {
+      if (import.meta.env.VITE_WEB3FORMS_ACCESS_KEY) {
+        await fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          mode: "no-cors",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
+            access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+            from_name: "DiziGroww Leads",
+            subject: "🔥 NEW LEAD - DiziGroww Website",
             name: form.name,
             email: form.email,
             phone: form.phone,
             business: form.business,
             service: form.service,
-            timestamp: new Date().toISOString()
+            message: `You have received a new audit request from ${form.name}. \nEmail: ${form.email} \nPhone: ${form.phone} \nBusiness Type: ${form.business} \nService Needed: ${form.service}`
           })
         });
       }
     } catch (error) {
-      console.error("Google Sheets Webhook Failed (ignored):", error);
+      console.error("Web3Forms Submission Failed:", error);
     } finally {
       setIsSubmitting(false);
       setSubmitted(true);
