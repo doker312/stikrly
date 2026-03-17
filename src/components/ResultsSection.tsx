@@ -3,20 +3,19 @@ import { TrendingUp, DollarSign, MousePointerClick, ShoppingCart } from "lucide-
 
 const results = [
   {
-    client: "E-Commerce Apparel Brand",
-    roas: "6.8x",
-    spend: "₹1,20,000",
-    revenue: "₹8,16,000",
-    purchases: 408,
-    cpa: "₹294"
+    client: "National Toy Brand",
+    tagline: "Scaled Meta from 5.0x to 15.0x ROAS",
+    rows: [
+      { name: "Meta Ads (Scaling Phase)", spend: "₹3,20,000", revenue: "₹48,00,000", roas: "15.0x" },
+      { name: "Google Ads (Performance Max)", spend: "₹1,15,000", revenue: "₹11,50,000", roas: "10.0x" }
+    ]
   },
   {
-    client: "D2C Skincare",
-    roas: "4.5x",
-    spend: "₹2,50,000",
-    revenue: "₹11,25,000",
-    purchases: 852,
-    cpa: "₹293"
+    client: "Premium Painting Brand",
+    tagline: "Scaled from 0 to 6.0x ROAS in 5 months",
+    rows: [
+      { name: "Omnichannel Funnel (Meta + Google)", spend: "₹2,50,000", revenue: "₹15,00,000", roas: "6.0x" }
+    ]
   }
 ];
 
@@ -35,7 +34,7 @@ const ResultsSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl mb-3">We Speak in ROAS.</h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-            Real screenshots from our Meta Ads Manager. We turn ad spend into profitable, scalable revenue.
+            Real performance metrics from our actual client accounts. We turn your ad spend into profitable, scalable revenue.
           </p>
         </motion.div>
 
@@ -51,47 +50,46 @@ const ResultsSection = () => {
                 transition={{ delay: i * 0.2 }}
                 className="bg-card border border-border rounded-xl shadow-card overflow-hidden"
               >
-                {/* Meta Ads Manager Header Mock */}
-                <div className="bg-secondary/50 border-b border-border px-4 py-2.5 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                    <span className="text-xs font-semibold text-foreground/80">{res.client} - Scale Campaign</span>
+                {/* Header Mock */}
+                <div className="bg-secondary/50 border-b border-border px-4 py-3 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+                    <div>
+                      <span className="text-sm font-semibold text-foreground block">{res.client}</span>
+                      <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wide">{res.tagline}</span>
+                    </div>
                   </div>
-                  <span className="text-[10px] text-muted-foreground bg-background px-2 py-0.5 rounded border border-border">Active</span>
+                  <span className="text-[10px] font-semibold text-green-600 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">Active</span>
                 </div>
                 
-                {/* Meta Ads Manager Data Row Mock */}
-                <div className="p-4 overflow-x-auto nice-scrollbar">
-                  <div className="min-w-[500px] flex justify-between items-center text-left">
-                    <div className="w-1/5">
-                      <p className="text-[10px] text-muted-foreground uppercase mb-1">Results</p>
-                      <p className="text-sm font-bold">{res.purchases}</p>
-                      <p className="text-[10px] text-muted-foreground">Website Purchases</p>
-                    </div>
-                    <div className="w-1/5">
-                      <p className="text-[10px] text-muted-foreground uppercase mb-1">Cost per result</p>
-                      <p className="text-sm font-bold">{res.cpa}</p>
-                      <p className="text-[10px] text-muted-foreground">Per Purchase</p>
-                    </div>
-                    <div className="w-1/5 border-l border-border pl-4">
-                      <p className="text-[10px] text-muted-foreground uppercase mb-1">Amount spent</p>
-                      <p className="text-sm font-bold text-foreground/90">{res.spend}</p>
-                    </div>
-                    <div className="w-1/5">
-                      <p className="text-[10px] text-primary font-bold uppercase mb-1">ROAS</p>
-                      <p className="text-lg font-black text-primary">{res.roas}</p>
-                    </div>
-                    <div className="w-1/5">
-                      <p className="text-[10px] text-green-500 font-bold uppercase mb-1">Purchase Value</p>
-                      <p className="text-sm font-bold text-green-500">{res.revenue}</p>
-                    </div>
-                  </div>
+                {/* Data Rows Mock */}
+                <div className="overflow-x-auto nice-scrollbar">
+                  <table className="w-full text-left min-w-[500px]">
+                    <thead className="border-b border-border bg-card">
+                      <tr>
+                        <th className="px-4 py-2.5 text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Campaign</th>
+                        <th className="px-4 py-2.5 text-[10px] text-muted-foreground font-semibold uppercase tracking-wider border-l border-border">Amount Spent</th>
+                        <th className="px-4 py-2.5 text-[10px] text-primary font-bold uppercase tracking-wider">ROAS</th>
+                        <th className="px-4 py-2.5 text-[10px] text-green-500 font-bold uppercase tracking-wider">Purchase Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {res.rows.map((row, j) => (
+                        <tr key={j} className="border-b border-border last:border-0 hover:bg-secondary/30 transition-colors">
+                          <td className="px-4 py-3 text-sm font-medium">{row.name}</td>
+                          <td className="px-4 py-3 text-sm text-foreground/90 border-l border-border">{row.spend}</td>
+                          <td className="px-4 py-3 text-lg font-black text-primary">{row.roas}</td>
+                          <td className="px-4 py-3 text-sm font-bold text-green-500">{row.revenue}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </motion.div>
             ))}
             
             <p className="text-xs text-muted-foreground italic text-center">
-              * Replace these data rows with actual screenshots of your Meta Ad accounts if preferred.
+              * Real performance data. Specific client names kept confidential.
             </p>
           </div>
 
@@ -109,7 +107,7 @@ const ResultsSection = () => {
               <div>
                 <h3 className="text-lg font-bold mb-1">Data-Backed Scaling</h3>
                 <p className="text-sm text-muted-foreground">
-                  We don't guess. We test creatives, audiences, and offers to find winning combinations that allow for aggressive, profitable scaling.
+                  We don't guess. We test creatives, audiences, and offers to find winning combinations that allow for aggressive, profitable scaling across Meta and Google.
                 </p>
               </div>
             </div>
@@ -133,7 +131,7 @@ const ResultsSection = () => {
               <div>
                 <h3 className="text-lg font-bold mb-1">High-Intent Traffic</h3>
                 <p className="text-sm text-muted-foreground">
-                  We filter out window-shoppers. Our Meta and Google Ad strategies ensure your budget is spent only on users ready to pull out their credit cards.
+                  We filter out window-shoppers. Our ad strategies ensure your budget is spent only on users who are ready to pull out their credit cards.
                 </p>
               </div>
             </div>
