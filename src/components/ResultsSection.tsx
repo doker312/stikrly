@@ -30,11 +30,11 @@ const ResultsSection = () => {
           className="text-center mb-12"
         >
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
-            Proven Results
+            See the Results We Acheived
           </span>
-          <h2 className="text-3xl md:text-4xl mb-3">We Speak in ROAS.</h2>
+          <h2 className="text-3xl md:text-4xl mb-3">100% Real, Verified Client Growth.</h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-            Real performance metrics from our actual client accounts. We turn your ad spend into profitable, scalable revenue.
+            Don't take our word for it. Here are the actual numbers and ROAS pulled straight from our active Meta and Google ad accounts. We turn your ad spend into profitable, scalable revenue.
           </p>
         </motion.div>
 
