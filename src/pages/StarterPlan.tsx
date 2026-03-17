@@ -240,15 +240,24 @@ const StarterPlan = () => {
             <p className="text-muted-foreground max-w-xl mx-auto px-4 mb-10 text-lg">
               We only accept <span className="font-bold text-foreground">5 starter clients per week</span> to ensure high quality execution. Secure your spot today for ₹999.
             </p>
-            <a href={paymentLink} target="_blank" rel="noopener noreferrer">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-10 py-5 bg-primary text-white text-xl font-bold rounded-full shadow-lg hover:shadow-primary/50 transition-all inline-flex items-center gap-2"
-                >
-                  Pay ₹999 Now <ArrowRight className="w-6 h-6" />
-                </motion.button>
-            </a>
+           <a
+  href={paymentLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => {
+    if (typeof fbq !== "undefined") {
+      fbq('track', 'InitiateCheckout');
+    }
+  }}
+>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="px-10 py-5 bg-primary text-white text-xl font-bold rounded-full shadow-lg hover:shadow-primary/50 transition-all inline-flex items-center gap-2"
+  >
+    Pay ₹999 Now <ArrowRight className="w-6 h-6" />
+  </motion.button>
+</a>
             <div className="mt-6 flex items-center justify-center gap-4 text-sm text-muted-foreground">
                <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-500"/> Secured checkout</span>
             </div>
