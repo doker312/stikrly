@@ -66,6 +66,10 @@ const Footer = () => (
               <span className="font-semibold w-20 flex-shrink-0">GSTIN:</span>
               <span className="uppercase tracking-wider font-mono text-xs mt-0.5">09AMVPU5948E1Z4</span>
             </li>
+            <li className="flex items-center gap-4 pt-4 mt-2 border-t border-charcoal-foreground/10">
+              <img src="/msme-logo.png" alt="MSME Registered" className="h-10 w-auto bg-white p-1 rounded-sm object-contain" />
+              <img src="/digital-india-logo.png" alt="Digital India" className="h-10 w-auto bg-white p-1 rounded-sm object-contain" />
+            </li>
           </ul>
         </div>
       </div>
