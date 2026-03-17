@@ -245,6 +245,25 @@ const StarterPlan = () => {
       </main>
 
       <Footer />
+      
+      {/* Sticky Bottom CTA Banner for Mobile & Desktop */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/90 backdrop-blur-md border-t border-border shadow-[0_-4px_20px_-10px_rgba(0,0,0,0.1)] z-[100] flex justify-center items-center">
+        <div className="container-main max-w-4xl flex items-center justify-between gap-4">
+          <div className="hidden sm:block">
+            <p className="font-bold text-lg">30-Day Starter Growth Plan</p>
+            <p className="text-sm text-muted-foreground">₹999 One-time. No commitment.</p>
+          </div>
+          <a href={paymentLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto px-6 py-3 bg-primary text-white font-bold rounded-full shadow-lg hover:shadow-primary/50 transition-all text-sm sm:text-base flex items-center justify-center gap-2"
+            >
+              Start Your 30 Days Plan <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
