@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { Mail, MessageCircle, MapPin } from "lucide-react";
 
 const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "hello@digigroww.com" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+1 (555) 000-0000" },
-  { icon: MapPin, label: "Location", value: "Remote — Worldwide" },
+  { icon: Mail, label: "Email Us", value: "hello@dizigroww.in" },
+  { icon: MessageCircle, label: "WhatsApp / Phone", value: "+91 9450010826" },
+  { icon: MapPin, label: "Location", value: "Greater Noida, UP" },
 ];
 
 const Contact = () => (
