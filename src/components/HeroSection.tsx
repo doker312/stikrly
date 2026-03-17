@@ -17,10 +17,10 @@ const HeroSection = () => {
             Performance Marketing Agency
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.1] mb-5">
-            Scale Your D2C Brand With <span className="text-primary">Unfair Ad Economics</span>
+            Turn Ad Spend Into <span className="text-primary">Profitable, Scalable Revenue</span>
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg mb-6 max-w-xl">
-            We don't just run ads. We engineer high-converting sales funnels, optimize your store for maximum AOV, and aggressively scale your revenue while crushing your CPA.
+            We don't just run ads. We engineer high-converting sales funnels, optimize your store for maximum AOV, and build full-scale e-commerce campaigns that turn clicks into loyal customers.
           </p>
 
           {/* Trust Badge */}
