@@ -121,12 +121,12 @@ const StarterPlan = () => {
         {/* 2. PROBLEM SECTION */}
         <section className="section-padding bg-white">
           <div className="container-main max-w-3xl">
-            <h2 className="text-3xl font-bold text-center mb-12">The "Agency" Trap is Wasting Your Budget.</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">You're getting sales, but still not making enough money.</h2>
             <div className="grid gap-6">
               {[
-                "You’re running ads but sales are stagnant, and you don’t know why.",
-                "Agencies quote you ₹20,000+ per month minimum retainers, which you can't afford right now.",
-                "You are confused by ROAS, CPAs, and pixel tracking jargon."
+                "Ads are working, but margins are low.",
+                "Website isn't converting properly.",
+                "Customers don't come back."
               ].map((text, i) => (
                 <div key={i} className="flex gap-4 p-6 bg-red-50/50 rounded-2xl border border-red-100 items-start">
                   <XCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
@@ -283,9 +283,9 @@ const StarterPlan = () => {
         {/* 8. FINAL CTA */}
         <div id="lead-form-section" className="bg-primary/5 border-t border-primary/10 pb-24">
           <div className="py-20 text-center">
-             <h2 className="text-3xl md:text-4xl px-4 font-bold mb-6">Start Your 30-Day Growth Plan</h2>
+             <h2 className="text-3xl md:text-4xl px-4 font-bold mb-6">If you want more profit, not just more sales — let's talk.</h2>
             <p className="text-muted-foreground max-w-xl mx-auto px-4 mb-10 text-lg">
-              We only accept <span className="font-bold text-foreground">5 starter clients per week</span> to ensure high quality execution. Secure your spot today for ₹999.
+              Secure your spot today for ₹999.
             </p>
             <a
               href={paymentLink}

@@ -27,9 +27,9 @@ const DashboardResultsSection = () => {
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
             Real Proof. Real Dashboards.
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Don't Just Take Our Word For It.</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">What Changed After Working With Us</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Take a look behind the scenes at the actual Meta Ads and Shopify dashboards of brands scaling with us. No fluff, just hard numbers.
+            More profit per order. Better conversion rate. Stable growth (not random spikes).
           </p>
         </motion.div>
 
@@ -46,10 +46,10 @@ const DashboardResultsSection = () => {
                 <TrendingUp className="text-blue-600 w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground">Meta Ads Performance</h3>
+                <h3 className="text-2xl font-bold text-foreground">High sales but low profit</h3>
                 <p className="text-muted-foreground text-sm flex items-center gap-1.5 mt-1">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  Live Campaign Data
+                  Website + offer + ads
                 </p>
               </div>
             </div>
@@ -93,9 +93,9 @@ const DashboardResultsSection = () => {
             </div>
 
             <div className="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
-              <h4 className="font-semibold text-blue-900 mb-2">The Impact</h4>
+              <h4 className="font-semibold text-blue-900 mb-2">The Result</h4>
               <p className="text-blue-800/80 text-sm leading-relaxed">
-                Consistent 5x-10x ROAS with drastically lowered CPAs. We structure campaigns to exploit machine learning, ensuring your budget is spent efficiently on high-intent buyers.
+                Profit increased significantly as we fixed the core foundation of their business, lowering CPAs and focusing purely on the metrics that matter.
               </p>
             </div>
           </motion.div>
@@ -113,10 +113,10 @@ const DashboardResultsSection = () => {
                 <ShoppingBag className="text-green-600 w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground">Shopify Store Revenue</h3>
+                <h3 className="text-2xl font-bold text-foreground">High sales but low profit</h3>
                 <p className="text-muted-foreground text-sm flex items-center gap-1.5 mt-1">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  Real Sales Flow
+                  Website + offer + ads
                 </p>
               </div>
             </div>
@@ -160,9 +160,9 @@ const DashboardResultsSection = () => {
             </div>
 
             <div className="bg-green-50/50 p-6 rounded-2xl border border-green-100">
-              <h4 className="font-semibold text-green-900 mb-2">The Scale</h4>
+              <h4 className="font-semibold text-green-900 mb-2">The Result</h4>
               <p className="text-green-800/80 text-sm leading-relaxed">
-                Translating ad clicks into actual money in the bank. Watch daily and monthly revenues compound as our omnichannel strategy kicks in and Conversion Rate Optimization takes over.
+                Profit increased systematically. Better landing pages combined with smarter ad strategy translated directly into higher margins.
               </p>
             </div>
           </motion.div>

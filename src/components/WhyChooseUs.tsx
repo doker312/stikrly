@@ -4,23 +4,23 @@ import { Shield, Layers, Eye, Zap } from "lucide-react";
 const reasons = [
   {
     icon: Layers,
-    title: "Full-Stack Approach",
-    copy: "Most agencies only run ads. We handle the full picture — paid ads, landing pages, CRO, and analytics — so nothing falls through the cracks.",
+    title: "We don't just run ads",
+    copy: "Most agencies focus only on Meta or Google metrics. We fix whatever is stopping your business from making money.",
   },
   {
     icon: Shield,
-    title: "Certified & Platform-Partnered",
-    copy: "Google Ads certified and Meta Blueprint certified. We stay updated with platform changes so your campaigns are always optimized.",
+    title: "We don't chase ROAS",
+    copy: "High ROAS on a dashboard doesn't always mean money in the bank. We optimize for actual profit margin.",
   },
   {
     icon: Eye,
-    title: "100% Transparency",
-    copy: "You own your ad accounts. You see every rupee spent. Weekly reports, no jargon, no hidden fees. We believe in earning trust through clarity.",
+    title: "We look at your full business",
+    copy: "From the moment they see your ad to their third time buying from you, we optimize the entire customer journey.",
   },
   {
     icon: Zap,
-    title: "Built for Growth",
-    copy: "Whether you're spending ₹50K or ₹50L per month, our systems and processes scale with you. Start small, grow fast.",
+    title: "We focus on what actually makes money",
+    copy: "Conversion rates, average order value, and retention. These are the levers that turn a struggling brand into a profitable one.",
   },
 ];
 
@@ -33,9 +33,9 @@ const WhyChooseUs = () => (
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-4xl mb-3">Why Work With Us</h2>
+        <h2 className="text-3xl md:text-4xl mb-3">Why We're Not Like Other Agencies</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
-          We're a focused, skilled team that cares about your results as much as you do.
+          We don't hide behind complicated dashboards. We focus on real business outcomes.
         </p>
       </motion.div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">

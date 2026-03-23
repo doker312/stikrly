@@ -4,74 +4,57 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Facebook,
-    title: "Meta Performance Ads",
-    desc: "Full-funnel Facebook & Instagram campaigns that drive leads, sales, and scale profitably.",
-    deliverables: ["Lead gen & DPA campaigns", "Creative testing & optimization", "Weekly performance reporting"],
-    useCase: "Best for: D2C brands, SaaS, Ecommerce",
+    icon: Search,
+    title: "Ads → Bring the right people",
+    desc: "We run high-intent campaigns across Meta and Google to bring in people who are actually ready to buy.",
+    deliverables: ["Targeting high-intent buyers", "Stopping wasteful ad spend"],
+    useCase: "The Engine",
     color: "border-l-primary",
     popular: true,
   },
   {
-    icon: Search,
-    title: "Google Ads Management",
-    desc: "Search, Display, Shopping & YouTube ads managed by certified specialists to maximize ROI.",
-    deliverables: ["Keyword strategy & bid management", "Ad copy & extensions optimization", "Conversion tracking setup"],
-    useCase: "Best for: SaaS, Lead gen, B2B",
+    icon: Layout,
+    title: "Website → Make them buy",
+    desc: "We fix your landing page speed, layout, and copy so your traffic actually converts into paying customers.",
+    deliverables: ["Conversion rate optimization", "Frictionless checkout"],
+    useCase: "The Foundation",
     color: "border-l-[hsl(210,80%,50%)]",
     popular: true,
   },
   {
-    icon: BarChart3,
-    title: "Conversion Rate Optimization",
-    desc: "Funnel analysis, UX testing, and landing page redesign to turn more visitors into customers.",
-    deliverables: ["Funnel analysis & audit", "A/B & multivariate testing", "Landing page optimization"],
-    useCase: "Best for: Ecommerce, SaaS, Lead gen",
+    icon: ShoppingBag,
+    title: "Offers → Increase order value",
+    desc: "We construct irresistible bundles, upsells, and pricing strategies so each buyer spends more money.",
+    deliverables: ["Strategic bundling", "Smart upsell mapping"],
+    useCase: "The Multiplier",
     color: "border-l-[hsl(145,60%,40%)]",
   },
   {
-    icon: Layout,
-    title: "Landing Page Design",
-    desc: "High-converting, mobile-first landing pages with analytics integration and fast load times.",
-    deliverables: ["Custom design & copywriting", "Mobile-first responsive builds", "Form & CTA optimization"],
-    useCase: "Best for: Paid ad campaigns, Product launches",
+    icon: BarChart3,
+    title: "Retention → Bring them back",
+    desc: "We build remarketing and loyalty flows to ensure your customers keep returning to buy more.",
+    deliverables: ["Email & SMS flows", "Loyalty loops"],
+    useCase: "The Profit Center",
     color: "border-l-[hsl(35,90%,50%)]",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Shopify & Ecommerce",
-    desc: "Store setup, product page optimization, and integrations that drive more online sales.",
-    deliverables: ["Store setup & configuration", "Product page optimization", "Payment & shipping setup"],
-    useCase: "Best for: D2C, Ecommerce, Retail",
-    color: "border-l-[hsl(280,60%,55%)]",
-  },
-  {
-    icon: Globe,
-    title: "WordPress & Web Development",
-    desc: "Custom WordPress sites built for performance, SEO, and conversion. Ongoing support included.",
-    deliverables: ["Custom theme development", "SEO-optimized structure", "Speed & performance tuning"],
-    useCase: "Best for: Agencies, B2B, Service businesses",
-    color: "border-l-[hsl(200,70%,50%)]",
   },
 ];
 
 const ServicesGrid = () => (
   <section className="section-padding bg-secondary">
-    <div className="container-main">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-3xl md:text-4xl mb-3">Full-Stack Performance Marketing Solutions</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
-          We don't just run ads—we build complete customer acquisition systems. Everything from paid ads
-          to landing pages to conversion optimization under one roof.
-        </p>
-      </motion.div>
+      <div className="container-main">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl mb-3">We fix the 4 things that actually make you money:</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+            No vanity metrics. Just a proven 4-step framework to maximize your return on investment.
+          </p>
+        </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {services.map((s, i) => (
           <motion.div
             key={i}

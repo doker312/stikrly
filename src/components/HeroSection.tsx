@@ -14,13 +14,13 @@ const HeroSection = () => {
           className="lg:col-span-3"
         >
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wider">
-            Performance Marketing Agency
+            Not Your Typical Ads Agency
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.1] mb-5">
-            Turn Ad Spend Into <span className="text-primary">Profitable, Scalable Revenue</span>
+            More Sales Doesn't Mean <span className="text-primary">More Profit</span>
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg mb-6 max-w-xl">
-            We don't just run ads. We engineer high-converting sales funnels, optimize your store for maximum AOV, and build full-scale e-commerce campaigns that turn clicks into loyal customers.
+            Most brands lose money even after getting good ROAS. We fix your ads, website, and offers so you actually make profit.
           </p>
 
           {/* Trust Badge */}
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.97 }}
                 className="bg-gradient-to-r from-primary to-primary-deep text-primary-foreground px-7 py-3.5 rounded-full text-sm font-semibold shadow-lg flex items-center gap-2"
               >
-                Claim Your Free Audit <ArrowRight size={16} />
+                See How We Grow Profit <ArrowRight size={16} />
               </motion.button>
             </a>
             <Link to="/services">
@@ -82,12 +82,12 @@ const HeroSection = () => {
           className="lg:col-span-2 hidden lg:block"
         >
           <div className="bg-card rounded-2xl shadow-card-hover p-6 border border-border space-y-4">
-            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">What We Do</p>
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">How We Do It</p>
             {[
-              { title: "Meta & Google Ads", desc: "Campaigns built for ROI, not vanity metrics" },
-              { title: "Conversion Optimization", desc: "Turn more visitors into paying customers" },
-              { title: "Landing Pages & Web", desc: "High-converting, mobile-first design" },
-              { title: "Analytics & Tracking", desc: "Full-funnel visibility with proper attribution" },
+              { title: "Bring the right people", desc: "Ads that target buyers, not just clicks" },
+              { title: "Make them buy", desc: "Websites fixed for maximum conversion" },
+              { title: "Increase order value", desc: "Offers that make people spend more" },
+              { title: "Bring them back", desc: "Retention systems for loyal customers" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -109,10 +109,10 @@ const HeroSection = () => {
         {/* Mobile service cards */}
         <div className="lg:hidden grid grid-cols-2 gap-3">
           {[
-            { label: "Meta & Google Ads", icon: "📈" },
-            { label: "CRO & Landing Pages", icon: "🎯" },
-            { label: "Web Design", icon: "💻" },
-            { label: "Analytics", icon: "📊" },
+            { label: "Bring the right people", icon: "🤝" },
+            { label: "Make them buy", icon: "🛒" },
+            { label: "Increase order value", icon: "📈" },
+            { label: "Bring them back", icon: "🔁" },
           ].map((s) => (
             <motion.div
               key={s.label}

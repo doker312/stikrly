@@ -72,7 +72,7 @@ const LeadForm = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl text-center mb-4"
         >
-          Get Your Free Marketing Audit
+          If you want more profit, not just more sales — let's talk.
         </motion.h2>
         <p className="text-center text-muted-foreground mb-10">Fill out the form below and we'll analyze your ad accounts for free.</p>
 

@@ -25,7 +25,7 @@ const StarterPlanCTA = () => {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">
-            Want these exact results for <span className="text-primary">₹999?</span>
+            If you want more profit, not just more sales — let's talk.
           </h2>
           
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
