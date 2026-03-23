@@ -46,10 +46,10 @@ const DashboardResultsSection = () => {
                 <TrendingUp className="text-blue-600 w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground">High sales but low profit</h3>
+                <h3 className="text-2xl font-bold text-foreground">Lower Cost Per Acquisition</h3>
                 <p className="text-muted-foreground text-sm flex items-center gap-1.5 mt-1">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  Website + offer + ads
+                  CPA dropped by 42%
                 </p>
               </div>
             </div>
@@ -113,10 +113,10 @@ const DashboardResultsSection = () => {
                 <ShoppingBag className="text-green-600 w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground">High sales but low profit</h3>
+                <h3 className="text-2xl font-bold text-foreground">Consistent Revenue Growth</h3>
                 <p className="text-muted-foreground text-sm flex items-center gap-1.5 mt-1">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  Website + offer + ads
+                  Revenue lifted by 185%
                 </p>
               </div>
             </div>
