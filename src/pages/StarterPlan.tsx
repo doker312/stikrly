@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Star, StarHalf, CheckCircle2, ArrowRight, XCircle, ShieldCheck, Building2, FileText } from "lucide-react";
 import CaseStudySnapshot from "@/components/CaseStudySnapshot";
-import FounderSection from "@/components/FounderSection";
 import GoogleReviews from "@/components/GoogleReviews";
 
 declare const fbq: any;
@@ -69,8 +68,8 @@ const StarterPlan = () => {
                 "Website traffic bounces instead of buying.",
                 "Customers buy once and never come back."
               ].map((text, i) => (
-                <div key={i} className="flex flex-col gap-3 p-6 bg-red-50/30 rounded-2xl border border-red-100 text-center items-center">
-                  <XCircle className="w-8 h-8 text-red-500" />
+                <div key={i} className="flex flex-col gap-3 p-6 bg-card rounded-2xl border border-border hover:shadow-md transition-shadow text-center items-center">
+                  <XCircle className="w-8 h-8 text-primary/70" />
                   <p className="text-lg text-foreground font-semibold">{text}</p>
                 </div>
               ))}
@@ -190,7 +189,6 @@ const StarterPlan = () => {
         {/* 6. PROOF & AUTHORITY */}
         <CaseStudySnapshot />
         <GoogleReviews />
-        <FounderSection />
 
         {/* 7. QUALIFICATION (IS THIS FOR YOU?) */}
         <section className="section-padding bg-background">
@@ -198,9 +196,9 @@ const StarterPlan = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Is This Right For You?</h2>
             
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              <div className="bg-green-50/50 p-8 xl:p-10 rounded-3xl border border-green-200 shadow-sm relative overflow-hidden">
-                <h3 className="text-2xl font-bold mb-6 text-green-800 flex items-center gap-2">
-                  <CheckCircle2 className="text-green-600" /> PERFECT FOR:
+              <div className="bg-card p-8 xl:p-10 rounded-3xl border border-border shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <CheckCircle2 className="text-primary text-xl" /> PERFECT FOR:
                 </h3>
                 <ul className="space-y-4">
                   {[
@@ -210,16 +208,16 @@ const StarterPlan = () => {
                     "Brands spending less than ₹60,000/month on ads"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-foreground font-medium items-start">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2.5 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0"></div>
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-red-50/30 p-8 xl:p-10 rounded-3xl border border-red-200 shadow-sm relative overflow-hidden">
-                <h3 className="text-2xl font-bold mb-6 text-red-800 flex items-center gap-2">
-                  <XCircle className="text-red-500" /> NOT FOR:
+              <div className="bg-card p-8 xl:p-10 rounded-3xl border border-border shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+                <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                  <XCircle className="text-muted-foreground text-xl" /> NOT FOR:
                 </h3>
                 <ul className="space-y-4">
                   {[
@@ -229,7 +227,7 @@ const StarterPlan = () => {
                     "People who aren't willing to fix their website based on our audit"
                   ].map((item, i) => (
                     <li key={i} className="flex gap-3 text-foreground font-medium items-start">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2.5 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2.5 flex-shrink-0"></div>
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
@@ -246,8 +244,8 @@ const StarterPlan = () => {
             <div className="space-y-4">
               {[
                 { 
-                  q: "Why is it only ₹1,999 if agencies charge ₹20,000+?", 
-                  a: "Agencies charge high retainers for daily management and multi-lakh scaling. This plan provides the foundational setup and launches an initial campaign, making it safe for beginners." 
+                  q: "Why start with the ₹1,999 Foundation Plan instead of a full retainer?", 
+                  a: "We believe in earning our keep. Before asking for a monthly retainer, we prove our worth by fixing your core funnel, running a high-intent campaign, and delivering a clear roadmap. It's a low-risk way for you to experience exactly what we bring to the table." 
                 },
                 { 
                   q: "Will this guarantee sales?", 

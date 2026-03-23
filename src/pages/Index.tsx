@@ -25,7 +25,7 @@ const Index = () => (
       <ServicesGrid />
       <DashboardResultsSection />
       <WhyChooseUs />
-      <FounderSection />
+      <GoogleReviews />
       <Testimonial />
       <StarterPlanCTA />
       <Process />
