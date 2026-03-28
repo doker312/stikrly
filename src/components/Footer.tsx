@@ -77,10 +77,7 @@ const Footer = () => (
               <span className="font-semibold w-20 flex-shrink-0">WhatsApp:</span>
               <a href="https://wa.me/919450010826" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">+91 9450010826</a>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="font-semibold w-20 flex-shrink-0">Call:</span>
-              <a href="tel:+919477440662" className="hover:text-primary transition-colors">+91 9477440662</a>
-            </li>
+
             <li className="flex items-start gap-2 pt-2 border-t border-charcoal-foreground/10 mt-2">
               <span className="font-semibold w-20 flex-shrink-0">Address:</span>
               <span>Plot 19, KP, Greater Noida, Uttar Pradesh</span>
