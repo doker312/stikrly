@@ -10,6 +10,7 @@ import Careers from "./pages/Careers.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StarterPlan from "./pages/StarterPlan.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
+import ProposalGenerator from "./pages/ProposalGenerator.tsx";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/proposal-generator" element={<ProposalGenerator />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
