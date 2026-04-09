@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Landing Page",
-    priceUSD: "$100",
+    priceUSD: "$200",
     priceINR: "₹8,000",
     period: " onwards",
     desc: "High-converting single page tailored for your campaigns.",
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Full E-com Store",
-    priceUSD: "$190",
+    priceUSD: "$290",
     priceINR: "₹15,000",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
@@ -37,7 +37,7 @@ const plans = [
   },
   {
     name: "Meta Ads + Web",
-    priceUSD: "$250",
+    priceUSD: "$350",
     priceINR: "₹20,000",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
@@ -54,7 +54,7 @@ const plans = [
   },
   {
     name: "Omnichannel",
-    priceUSD: "$300",
+    priceUSD: "$400",
     priceINR: "₹25,000",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
