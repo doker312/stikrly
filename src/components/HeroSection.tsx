@@ -14,13 +14,13 @@ const HeroSection = () => {
           className="lg:col-span-3"
         >
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wider">
-            For Ambitious D2C Brands
+            Trusted by businesses across India, UAE & Southeast Asia
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.1] mb-5">
-            Stop burning ad budget. <span className="text-primary">Start scaling revenue.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] leading-[1.15] mb-5 font-bold tracking-tight">
+            We Build High-Converting Websites & Run Ads That Actually Grow Your Business.
           </h1>
           <p className="text-muted-foreground text-base sm:text-lg mb-6 max-w-xl">
-            Most agencies run ads. We run ads AND fix your landing pages. Same team. No hand-offs. No excuses. We engineer the exact funnels that turn clicks into profitable customers.
+            Tired of slow websites, missed deadlines, and agencies that ghost you? We deliver premium web development and data-driven performance marketing under one roof. No middlemen, no excuses.
           </p>
 
           {/* Trust Badges */}
@@ -36,18 +36,18 @@ const HeroSection = () => {
               <span>4.5 Google Rating</span>
             </a>
             <div className="inline-flex items-center gap-2 text-sm font-medium bg-secondary/50 border border-border px-3 py-1.5 rounded-full">
-               <span>💰 ₹2Cr+ Ad Spend Managed</span>
+               <span>🌍 Serving UAE, SG & India</span>
             </div>
           </div>
 
           {/* Value props */}
           <ul className="space-y-2.5 mb-8">
             {[
-              "End-to-end Solutions: Funnel Creation, CRO & Ad Management",
-              "Bespoke Landing Pages & Elite E-Commerce Stores",
-              "Results-focused omnichannel approach across Meta & Google",
+              "End-to-end Web Development (Shopify, WordPress, Custom)",
+              "Bespoke Landing Pages Built for Conversion",
+              "Results-focused omnichannel approach (Meta & Google Ads)",
             ].map((prop, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+              <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/80 font-medium">
                 <Check size={16} className="text-primary mt-0.5 flex-shrink-0" />
                 <span>{prop}</span>
               </li>
@@ -56,27 +56,32 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="/#process">
+            <a href="https://wa.me/918920150935?text=Hi%20DiziGroww,%20I'm%20interested%20in%20web%20development%20for%20my%20business." target="_blank" rel="noreferrer" className="w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="bg-gradient-to-r from-primary to-primary-deep text-primary-foreground px-7 py-3.5 rounded-full text-sm font-semibold shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto text-center"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-7 py-3.5 rounded-full text-sm font-semibold shadow-lg flex items-center justify-center w-full transition-colors"
               >
-                See How We Work <ArrowRight size={16} />
+                Chat on WhatsApp
               </motion.button>
             </a>
-            <a href="/#case-studies">
+            <a href="/contact" className="w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="border border-border hover:border-primary text-foreground hover:text-primary px-7 py-3.5 rounded-full text-sm font-semibold transition-colors w-full sm:w-auto text-center flex items-center justify-center"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-7 py-3.5 rounded-full text-sm font-semibold shadow-lg flex items-center justify-center gap-2 w-full transition-colors"
               >
-                See Our Results
+                Book a Free Call <ArrowRight size={16} />
               </motion.button>
             </a>
           </div>
-          <div className="mt-6 text-sm text-muted-foreground flex items-center gap-1.5">
-             🚀 Looking for a trial run? <Link to="/starter-plan" className="text-primary font-semibold hover:underline inline-flex items-center gap-1">View our ₹1,999 Starter Plan <ArrowRight size={14} /></Link>
+          
+          {/* Trust Bar below Hero CTAs */}
+          <div className="mt-8 pt-6 border-t border-border flex flex-wrap gap-4 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+            <div className="flex items-center gap-1.5"><Check size={14} className="text-green-500" /> 3-6 Week Delivery</div>
+            <div className="flex items-center gap-1.5"><Check size={14} className="text-green-500" /> Fixed Pricing</div>
+            <div className="flex items-center gap-1.5"><Check size={14} className="text-green-500" /> 100% Satisfaction Guarantee</div>
+            <div className="flex items-center gap-1.5"><Check size={14} className="text-green-500" /> 20+ Projects Delivered</div>
           </div>
         </motion.div>
 

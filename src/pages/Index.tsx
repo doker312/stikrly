@@ -14,12 +14,21 @@ import CaseStudySnapshot from "@/components/CaseStudySnapshot";
 import HowItWorks from "@/components/HowItWorks";
 import FounderSection from "@/components/FounderSection";
 import Testimonial from "@/components/Testimonial";
+import TrustSection from "@/components/TrustSection";
+import { useMeta } from "@/hooks/useMeta";
 
-const Index = () => (
-  <>
-    <Navbar />
-    <main>
-      <HeroSection />
+const Index = () => {
+  useMeta({
+    title: "DiziGroww | Web Development & Performance Marketing | UAE, Singapore & India",
+    description: "We Build High-Converting Websites & Run Ads That Actually Grow Your Business."
+  });
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <TrustSection />
       <CaseStudySnapshot />
       <HowItWorks />
       <ServicesGrid />
@@ -35,6 +44,7 @@ const Index = () => (
     </main>
     <Footer />
   </>
-);
+  );
+};
 
 export default Index;

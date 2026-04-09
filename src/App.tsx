@@ -12,7 +12,11 @@ import StarterPlan from "./pages/StarterPlan.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
 import ProposalGenerator from "./pages/ProposalGenerator.tsx";
 import Internships from "./pages/Internships.tsx";
+import WebDevDubai from "./pages/WebDevDubai.tsx";
+import WebDevSingapore from "./pages/WebDevSingapore.tsx";
+import Portfolio from "./pages/Portfolio.tsx";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieBanner from "@/components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -30,10 +34,14 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/proposal-generator" element={<ProposalGenerator />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/web-development-dubai" element={<WebDevDubai />} />
+          <Route path="/web-development-singapore" element={<WebDevSingapore />} />
           <Route path="/careers/internships" element={<Internships />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
+        <CookieBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

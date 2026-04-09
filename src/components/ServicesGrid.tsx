@@ -4,38 +4,38 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Search,
-    title: "Meta & Google Ads",
-    desc: "Bleeding money on ads with no ROAS? We rebuild your entire campaign structure — creatives, audiences, funnel — to make every rupee work harder.",
-    deliverables: ["Targeting high-intent buyers", "Stopping wasteful ad spend"],
-    useCase: "The Engine",
-    color: "border-l-primary",
-    popular: true,
-  },
-  {
-    icon: Layout,
-    title: "Landing Page Optimization",
-    desc: "Traffic bouncing instead of buying? We fix your landing page speed, layout, and copy so your hard-earned clicks actually convert.",
-    deliverables: ["Conversion rate optimization", "Frictionless checkout"],
+    icon: Globe,
+    title: "Web Development",
+    desc: "We build fast, secure, and scalable websites tailored for your international audience using WordPress and modern frameworks.",
+    deliverables: ["Custom WordPress/CMS", "Speed Optimized"],
     useCase: "The Foundation",
     color: "border-l-[hsl(210,80%,50%)]",
     popular: true,
   },
   {
     icon: ShoppingBag,
-    title: "Offer & AOV Strategy",
-    desc: "Getting sales but no margins? We construct irresistible bundles, upsells, and pricing strategies so each buyer spends more money.",
-    deliverables: ["Strategic bundling", "Smart upsell mapping"],
-    useCase: "The Multiplier",
+    title: "E-Commerce (Shopify)",
+    desc: "End-to-end Shopify development designed purely to maximize conversions and increase your Average Order Value.",
+    deliverables: ["Shopify setups", "Cart abandonment flows"],
+    useCase: "The Sales Engine",
     color: "border-l-[hsl(145,60%,40%)]",
+    popular: true,
   },
   {
-    icon: BarChart3,
-    title: "Retention & Reactivation",
-    desc: "Customers buying once and vanishing? We build remarketing and loyalty flows to ensure they keep returning to buy more.",
-    deliverables: ["Email & SMS flows", "Loyalty loops"],
-    useCase: "The Profit Center",
+    icon: Layout,
+    title: "Landing Pages & CRO",
+    desc: "Traffic bouncing? We design standalone landing pages and audit your funnel to ensure every click counts.",
+    deliverables: ["A/B Testing", "Frictionless checkout"],
+    useCase: "The Multiplier",
     color: "border-l-[hsl(35,90%,50%)]",
+  },
+  {
+    icon: Search,
+    title: "Performance Marketing",
+    desc: "Data-driven Meta and Google Ads campaigns that target high-intent buyers across the UAE, Singapore, and India.",
+    deliverables: ["ROAS focused", "Omnichannel strategy"],
+    useCase: "The Accelerator",
+    color: "border-l-primary",
   },
 ];
 
@@ -48,9 +48,9 @@ const ServicesGrid = () => (
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl mb-3">We fix the 4 things that actually make you money:</h2>
+          <h2 className="text-3xl md:text-4xl mb-3">Core Digital Services Built for Growth:</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
-            No vanity metrics. Just a proven 4-step framework to maximize your return on investment.
+            We deliver robust web development alongside precision performance marketing to ensure your investment drives real business impact.
           </p>
         </motion.div>
 
@@ -100,7 +100,7 @@ const ServicesGrid = () => (
       >
         <a href="/#audit-form">
           <button className="bg-primary text-white border-2 border-primary hover:bg-transparent hover:text-primary px-8 py-4 rounded-full text-base font-bold shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto">
-            Let's Fix Your Growth Pillars
+            Get a Custom Quote
           </button>
         </a>
       </motion.div>

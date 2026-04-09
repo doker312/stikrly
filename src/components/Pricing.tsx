@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const plans = [
   {
     name: "Landing Page",
     priceUSD: "$200",
-    priceINR: "₹8,000",
     period: " onwards",
     desc: "High-converting single page tailored for your campaigns.",
     features: [
@@ -23,7 +20,6 @@ const plans = [
   {
     name: "Full E-com Store",
     priceUSD: "$290",
-    priceINR: "₹17,000",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
     features: [
@@ -39,7 +35,6 @@ const plans = [
   {
     name: "Meta Ads + Web",
     priceUSD: "$350",
-    priceINR: "₹20,000",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
     features: [
@@ -56,7 +51,6 @@ const plans = [
   {
     name: "Omnichannel",
     priceUSD: "$400",
-    priceINR: "₹25,000",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
     features: [
@@ -73,8 +67,6 @@ const plans = [
 ];
 
 const Pricing = () => {
-  const [currency, setCurrency] = useState<"USD" | "INR">("USD");
-
   return (
     <section className="section-padding">
       <div className="container-main">
@@ -86,32 +78,8 @@ const Pricing = () => {
         >
           <h2 className="text-3xl md:text-4xl mb-3">Transparent, Scalable Pricing</h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-5">
-            No hidden fees. Your ad budget goes to ads. We charge a fixed monthly retainer based on service scope.
+            No hidden fees. Your ad budget goes to ads. We charge a fixed flat-rate based on service scope. We accept USD, SGD, and AED globally.
           </p>
-
-          {/* Currency Toggle */}
-          <div className="inline-flex items-center bg-secondary rounded-full p-1 border border-border">
-            <button
-              onClick={() => setCurrency("USD")}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                currency === "USD"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              USD ($)
-            </button>
-            <button
-              onClick={() => setCurrency("INR")}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                currency === "INR"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              INR (₹)
-            </button>
-          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-7xl mx-auto">
@@ -138,14 +106,9 @@ const Pricing = () => {
                 {p.desc}
               </p>
               <div className="mb-5">
-                <motion.span
-                  key={currency}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="text-3xl lg:text-2xl xl:text-3xl font-display font-bold"
-                >
-                  {currency === "USD" ? p.priceUSD : p.priceINR}
-                </motion.span>
+                <span className="text-3xl lg:text-2xl xl:text-3xl font-display font-bold">
+                  {p.priceUSD}
+                </span>
                 <span className={`text-sm ${p.popular ? "text-charcoal-foreground/50" : "text-muted-foreground"}`}>
                   {p.period}
                 </span>

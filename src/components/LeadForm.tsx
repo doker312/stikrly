@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const LeadForm = () => {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", service: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", service: "", country: "", budget: "" });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -16,7 +16,9 @@ const LeadForm = () => {
 *Email:* ${form.email}
 *Phone:* ${form.phone}
 *Business:* ${form.business}
-*Service:* ${form.service}`;
+*Country:* ${form.country}
+*Service:* ${form.service}
+*Budget:* ${form.budget}`;
     
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
     
@@ -35,7 +37,9 @@ const LeadForm = () => {
             phone: form.phone,
             business: form.business,
             service: form.service,
-            message: `You have received a new audit request from ${form.name}. \nEmail: ${form.email} \nPhone: ${form.phone} \nBusiness Type: ${form.business} \nService Needed: ${form.service}`
+            country: form.country,
+            budget: form.budget,
+            message: `You have received a new inquiry from ${form.name}. \nEmail: ${form.email} \nPhone: ${form.phone} \nCountry: ${form.country} \nBusiness: ${form.business} \nService Needed: ${form.service} \nBudget: ${form.budget}`
           })
         });
       }
@@ -72,9 +76,9 @@ const LeadForm = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl text-center mb-4"
         >
-          Ready to stop guessing and start scaling?
+          Ready to build something great?
         </motion.h2>
-        <p className="text-center text-muted-foreground mb-10">Fill out the form below and we'll analyze your ad accounts for free.</p>
+        <p className="text-center text-muted-foreground mb-10">Fill out the form below and our team will respond within 4 business hours.</p>
 
         <motion.form
           initial={{ opacity: 0, y: 20 }}
@@ -116,8 +120,32 @@ const LeadForm = () => {
               <option>E-Commerce</option>
               <option>SaaS</option>
               <option>Local Business</option>
-              <option>Agency</option>
+              <option>Corporate</option>
+              <option>Startup</option>
+            </select>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <select
+              value={form.country}
+              onChange={(e) => setForm({ ...form, country: e.target.value })}
+              className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+            >
+              <option value="">Country</option>
+              <option>UAE</option>
+              <option>Singapore</option>
+              <option>India</option>
               <option>Other</option>
+            </select>
+            <select
+              value={form.budget}
+              onChange={(e) => setForm({ ...form, budget: e.target.value })}
+              className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
+            >
+              <option value="">Budget Range</option>
+              <option>$500 - $1,000</option>
+              <option>$1,000 - $3,000</option>
+              <option>$3,000 - $5,000</option>
+              <option>$5,000+</option>
             </select>
           </div>
           <select
@@ -126,12 +154,11 @@ const LeadForm = () => {
             className="w-full px-4 py-3 rounded-xl border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
           >
             <option value="">Service Needed</option>
-            <option>Meta Ads</option>
-            <option>Google Ads</option>
-            <option>CRO</option>
+            <option>Web Development (Shopify)</option>
+            <option>Web Development (WordPress)</option>
             <option>Landing Pages</option>
-            <option>Web Design</option>
-            <option>Shopify</option>
+            <option>Website Redesign & CRO</option>
+            <option>Performance Marketing</option>
           </select>
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -143,7 +170,7 @@ const LeadForm = () => {
             {isSubmitting ? (
               <span className="animate-pulse">Sending...</span>
             ) : (
-              "Send My Free Audit Request"
+              "Get Your Custom Quote"
             )}
           </motion.button>
         </motion.form>

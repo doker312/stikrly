@@ -6,28 +6,24 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Facebook, title: "Meta Ads Management", desc: "We create and manage high-performing Facebook & Instagram ad campaigns that drive real revenue.",
-    includes: ["Campaign strategy & setup", "Ad creative direction", "Audience research & targeting", "A/B testing & optimization", "Weekly performance reports"],
+    icon: ShoppingBag, title: "Shopify Development", desc: "Enterprise-grade eCommerce stores built on Shopify, designed to sell more and scale seamlessly across borders.",
+    includes: ["Store setup & configuration", "Custom theme design", "Product page optimization", "Payment & shipping setup", "Performance & speed tuning"],
   },
   {
-    icon: Search, title: "Google Ads Management", desc: "Search, Display, Shopping & YouTube ads managed by certified specialists to maximize your ROI.",
-    includes: ["Keyword research & planning", "Ad copy & extensions", "Bid strategy optimization", "Negative keyword management", "Conversion tracking setup"],
+    icon: Globe, title: "WordPress/WooCommerce Development", desc: "Custom WordPress websites and WooCommerce platforms that look stunning and empower B2B and retail growth.",
+    includes: ["Custom theme development", "SEO-optimized architecture", "Speed & performance tuning", "Advanced security setup", "Ongoing maintenance"],
   },
   {
-    icon: BarChart3, title: "Conversion Rate Optimization", desc: "We analyze your funnel and fix what's broken so more visitors turn into customers.",
-    includes: ["Funnel analysis & audit", "Heatmap & session recording review", "A/B & multivariate testing", "Landing page optimization", "Checkout flow improvements"],
+    icon: Layout, title: "Landing Page Design & Development", desc: "High-converting, standalone landing pages specifically engineered to capture leads from your paid traffic.",
+    includes: ["Custom design & copywriting", "Mobile-first & responsive", "Ultra-fast load times", "A/B testing implementation", "CRM & Analytics integration"],
   },
   {
-    icon: Layout, title: "Landing Page Design", desc: "High-converting landing pages designed to capture leads and drive sales from your ad traffic.",
-    includes: ["Custom design & copy", "Mobile-first responsive", "Fast loading optimization", "Form & CTA optimization", "Analytics integration"],
+    icon: BarChart3, title: "Website Redesign & CRO", desc: "We audit and revamp your outdated site to meet modern standards, dramatically improving your conversion rates.",
+    includes: ["Full UX/UI audit", "Heatmap & session analysis", "Checkout flow improvements", "Trust factor enhancement", "Multivariate testing"],
   },
   {
-    icon: Globe, title: "Web Design & WordPress", desc: "Full custom websites built on WordPress that look stunning and convert visitors into customers.",
-    includes: ["Custom theme development", "SEO-optimized structure", "Speed & performance tuning", "Content management training", "Ongoing maintenance"],
-  },
-  {
-    icon: ShoppingBag, title: "Shopify Development", desc: "eCommerce stores built on Shopify that are designed to sell more and scale faster.",
-    includes: ["Store setup & configuration", "Custom theme design", "Product page optimization", "Payment & shipping setup", "App integrations"],
+    icon: Search, title: "Performance Marketing (Meta + Google Ads)", desc: "We run data-heavy ad campaigns targeting high-intent demographics in Dubai, Singapore, and worldwide.",
+    includes: ["Omnichannel campaign strategy", "Data-driven creative direction", "Audience research & targeting", "Bid strategy optimization", "Transparent ROI reporting"],
   },
 ];
 
@@ -39,10 +35,9 @@ const steps = [
 ];
 
 const pricing = [
-  { name: "Landing Page", price: "₹8,000", period: " onwards", features: ["Landing page development", "CRO optimisation", "Funnel creation", "Content creation"], popular: false },
-  { name: "E-com Store", price: "₹15,000", period: " onwards", features: ["Full e-com store development", "CRO optimisation", "Funnel creation", "Content creation"], popular: false },
-  { name: "Meta Ads + Web", price: "₹20,000", period: "/mo", features: ["Meta ads management", "Website management", "CRO optimisation", "Funnel creation", "Content creation"], popular: true },
-  { name: "Omnichannel", price: "₹25,000", period: "/mo", features: ["Meta ads + Google ads", "Website management", "CRO optimisation", "Funnel creation", "Content creation"], popular: false },
+  { name: "Starter", price: "$499", period: "", features: ["Single Landing Page", "5 Dedicated Sections", "Mobile Responsive", "Lead Form Integration"], popular: false },
+  { name: "Growth", price: "$999", period: "", features: ["Multi-page Website (Up to 7)", "CMS Setup (WordPress)", "Basic Technical SEO", "Mobile UI Optimized"], popular: true },
+  { name: "E-Commerce", price: "$1,799", period: "", features: ["Shopify or WooCommerce", "Up to 50 Products added", "Payment Gateway Integration", "Cart Optimization"], popular: false },
 ];
 
 const Services = () => (
@@ -52,9 +47,9 @@ const Services = () => (
       {/* Hero */}
       <section className="section-padding bg-secondary">
         <div className="container-main text-center">
-          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary text-xs font-semibold uppercase tracking-wider">Top Performance Marketing Agency</motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl mt-4 mb-6">Digital Marketing Services</motion.h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">End-to-end performance marketing solutions to help your business attract, convert, and retain customers at scale using elite Meta & Google Ads strategies.</p>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-primary text-xs font-semibold uppercase tracking-wider">Premium Web Development & Marketing</motion.span>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl mt-4 mb-6">Expert Services for Global Brands</motion.h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">End-to-end web architecture and performance marketing solutions to help your business attract, convert, and engage customers at an international scale.</p>
         </div>
       </section>
 
@@ -81,6 +76,11 @@ const Services = () => (
                     </li>
                   ))}
                 </ul>
+                <a href="/contact" className="inline-block mt-6">
+                  <motion.button whileHover={{ scale: 1.05 }} className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-md transition-colors">
+                    Get a Quote
+                  </motion.button>
+                </a>
               </div>
               <div className={`bg-secondary rounded-2xl p-12 flex items-center justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                 <s.icon size={120} className="text-primary/20" />
@@ -111,7 +111,7 @@ const Services = () => (
         <div className="container-main">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-4xl text-center mb-4">Transparent Pricing</motion.h2>
           <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">Simple, honest pricing. No hidden fees. No long-term contracts.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto xl:px-4">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto xl:px-4">
             {pricing.map((p, i) => (
               <motion.div
                 key={i}

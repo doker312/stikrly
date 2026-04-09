@@ -17,8 +17,8 @@ const Contact = () => (
       <section className="section-padding">
         <div className="container-main">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl mb-4">Let's Grow Your Business Together</h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">Get in touch for a free marketing audit. No commitments, no pressure — just actionable insights.</p>
+            <h1 className="text-4xl md:text-5xl mb-4">Let's Build Your Digital Presence</h1>
+            <p className="text-muted-foreground max-w-xl mx-auto">Get in touch for a custom web development or marketing quote. We respond within 4 business hours.</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-5 gap-12">
@@ -43,6 +43,13 @@ const Contact = () => (
                   <li>✓ Dedicated account manager</li>
                   <li>✓ Results within 30 days or we work free</li>
                 </ul>
+              </div>
+              <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mt-8 text-center flex flex-col items-center">
+                <h3 className="text-lg font-bold mb-2">Book a Discovery Call</h3>
+                <p className="text-xs text-muted-foreground mb-4">We work across IST, GST & SGT timezones.</p>
+                <div className="w-full aspect-video bg-secondary rounded-xl flex items-center justify-center border border-border overflow-hidden">
+                  <p className="text-sm font-semibold text-muted-foreground px-4">[ Calendly Embed Placeholder ]</p>
+                </div>
               </div>
             </motion.div>
 
