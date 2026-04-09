@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "dizigrowwofficial@gmail.com" },
@@ -12,6 +13,10 @@ const contactInfo = [
 
 const Contact = () => (
   <>
+    <Helmet>
+      <title>Contact Us | DiziGroww</title>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </Helmet>
     <Navbar />
     <main className="pt-16">
       <section className="section-padding">
@@ -47,8 +52,8 @@ const Contact = () => (
               <div className="bg-card rounded-2xl p-6 border border-border shadow-sm mt-8 text-center flex flex-col items-center">
                 <h3 className="text-lg font-bold mb-2">Book a Discovery Call</h3>
                 <p className="text-xs text-muted-foreground mb-4">We work across IST, GST & SGT timezones.</p>
-                <div className="w-full aspect-video bg-secondary rounded-xl flex items-center justify-center border border-border overflow-hidden">
-                  <p className="text-sm font-semibold text-muted-foreground px-4">[ Calendly Embed Placeholder ]</p>
+                <div className="w-full bg-secondary rounded-xl border border-border overflow-hidden">
+                  <div className="calendly-inline-widget w-full min-h-[500px]" data-url="https://calendly.com/dizigrowwofficial/30min" style={{ minWidth: "320px", height: "500px" }}></div>
                 </div>
               </div>
             </motion.div>

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import TiltCard from "./TiltCard";
 
 const plans = [
   {
@@ -92,15 +91,12 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="h-full relative"
+              className={`relative rounded-2xl p-6 sm:p-7 ${
+                p.popular
+                  ? "bg-charcoal text-charcoal-foreground shadow-xl ring-2 ring-primary"
+                  : "bg-card shadow-card border border-border"
+              }`}
             >
-              <TiltCard
-                className={`relative h-full rounded-2xl p-6 sm:p-7 ${
-                  p.popular
-                    ? "bg-charcoal text-charcoal-foreground shadow-xl ring-2 ring-primary"
-                    : "bg-card shadow-card border border-border"
-                }`}
-              >
               {p.popular && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
                   Most Popular
@@ -147,7 +143,6 @@ const Pricing = () => {
                   {p.cta}
                 </motion.button>
               </a>
-              </TiltCard>
             </motion.div>
           ))}
         </div>
