@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const plans = [
   {
     name: "Landing Page",
-    priceUSD: "₹15,000",
-
+    priceUSD: "$100",
+    priceINR: "₹8,000",
     period: " onwards",
     desc: "High-converting single page tailored for your campaigns.",
     features: [
@@ -20,7 +21,8 @@ const plans = [
   },
   {
     name: "Full E-com Store",
-    priceUSD: "₹25,000",
+    priceUSD: "$190",
+    priceINR: "₹15,000",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
     features: [
@@ -35,7 +37,8 @@ const plans = [
   },
   {
     name: "Meta Ads + Web",
-    priceUSD: "₹35,000",
+    priceUSD: "$250",
+    priceINR: "₹20,000",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
     features: [
@@ -51,7 +54,8 @@ const plans = [
   },
   {
     name: "Omnichannel",
-    priceUSD: "₹50,000",
+    priceUSD: "$300",
+    priceINR: "₹25,000",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
     features: [
@@ -68,6 +72,8 @@ const plans = [
 ];
 
 const Pricing = () => {
+  const [currency, setCurrency] = useState<"INR" | "USD">("INR");
+
   return (
     <section className="section-padding">
       <div className="container-main">
@@ -75,12 +81,35 @@ const Pricing = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 flex flex-col items-center"
         >
           <h2 className="text-3xl md:text-4xl mb-3">Transparent, Scalable Pricing</h2>
-          <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-5">
-            No hidden fees. Your ad budget goes to ads. We charge a fixed flat-rate based on service scope. We accept INR globally.
+          <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-6">
+            No hidden fees. Your ad budget goes to ads. We charge a fixed flat-rate based on service scope.
           </p>
+          
+          <div className="inline-flex bg-secondary p-1 rounded-full border border-border">
+            <button 
+              onClick={() => setCurrency("INR")}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                currency === "INR" 
+                  ? "bg-primary text-primary-foreground shadow-sm" 
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              INR (₹)
+            </button>
+            <button 
+              onClick={() => setCurrency("USD")}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
+                currency === "USD" 
+                  ? "bg-primary text-primary-foreground shadow-sm" 
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              USD ($)
+            </button>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-7xl mx-auto">
@@ -108,7 +137,7 @@ const Pricing = () => {
               </p>
               <div className="mb-5">
                 <span className="text-3xl lg:text-2xl xl:text-3xl font-display font-bold">
-                  {p.priceUSD}
+                  {currency === "USD" ? p.priceUSD : p.priceINR}
                 </span>
                 <span className={`text-sm ${p.popular ? "text-charcoal-foreground/50" : "text-muted-foreground"}`}>
                   {p.period}
