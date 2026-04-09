@@ -5,6 +5,7 @@ const plans = [
   {
     name: "Landing Page",
     priceUSD: "$200",
+
     period: " onwards",
     desc: "High-converting single page tailored for your campaigns.",
     features: [
@@ -19,7 +20,7 @@ const plans = [
   },
   {
     name: "Full E-com Store",
-    priceUSD: "$290",
+    priceUSD: "$300",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
     features: [
@@ -34,7 +35,7 @@ const plans = [
   },
   {
     name: "Meta Ads + Web",
-    priceUSD: "$350",
+    priceUSD: "$400",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
     features: [
@@ -50,7 +51,7 @@ const plans = [
   },
   {
     name: "Omnichannel",
-    priceUSD: "$400",
+    priceUSD: "$600",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
     features: [
