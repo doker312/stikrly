@@ -41,8 +41,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-black text-foreground tracking-tighter leading-[1.05] mb-6 drop-shadow-sm"
           >
-            We Build High-Converting Websites <br className="hidden lg:block" />
-            <span className="text-primary drop-shadow-sm">& Scale Your Brand with Ads.</span>
+            Stop Burning Ad Spend on <br className="hidden lg:block" />
+            <span className="text-primary drop-shadow-sm">Websites That Can't Convert.</span>
           </motion.h1>
 
           <motion.h2
@@ -51,7 +51,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
             className="text-lg md:text-2xl font-bold text-muted-foreground tracking-wide mb-10 max-w-3xl"
           >
-            Tired of slow websites, missed deadlines, and agencies that ghost you? We deliver premium web development and data-driven performance marketing under one roof. No middlemen, no excuses.
+            Most agencies focus on meaningless traffic. We build psychological sales funnels and scale them aggressively using data-driven Meta & Google Ads. Direct ROI. No excuses.
           </motion.h2>
 
           {/* Subheading: Icon-driven benefits instead of a huge wall of text */}
@@ -77,17 +77,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center justify-center w-full"
           >
-            <a href="https://wa.me/918920150935?text=Hi%20DiziGroww,%20I'm%20interested%20in%20web%20development%20for%20my%20business." target="_blank" rel="noreferrer" className="w-full sm:w-auto">
-              <button aria-label="Chat on WhatsApp" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-5 rounded-full text-lg font-bold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <MessageCircle className="w-5 h-5 fill-current" /> Chat on WhatsApp
-              </button>
-            </a>
-
             <a href="/contact" className="w-full sm:w-auto">
-              <button aria-label="Book a Free Call" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-5 rounded-full text-lg font-bold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                Book a Free Call
+              <button aria-label="Book a Free Call" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-5 rounded-full text-lg font-bold shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                Book a Free Discovery Call
                 <ArrowRight className="w-5 h-5" />
               </button>
             </a>

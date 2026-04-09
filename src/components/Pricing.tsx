@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Landing Page",
-    priceUSD: "$200",
+    priceUSD: "₹15,000",
 
     period: " onwards",
     desc: "High-converting single page tailored for your campaigns.",
@@ -20,7 +20,7 @@ const plans = [
   },
   {
     name: "Full E-com Store",
-    priceUSD: "$300",
+    priceUSD: "₹25,000",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
     features: [
@@ -35,7 +35,7 @@ const plans = [
   },
   {
     name: "Meta Ads + Web",
-    priceUSD: "$400",
+    priceUSD: "₹35,000",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
     features: [
@@ -51,7 +51,7 @@ const plans = [
   },
   {
     name: "Omnichannel",
-    priceUSD: "$600",
+    priceUSD: "₹50,000",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
     features: [
@@ -79,7 +79,7 @@ const Pricing = () => {
         >
           <h2 className="text-3xl md:text-4xl mb-3">Transparent, Scalable Pricing</h2>
           <p className="text-muted-foreground text-sm max-w-xl mx-auto mb-5">
-            No hidden fees. Your ad budget goes to ads. We charge a fixed flat-rate based on service scope. We accept USD, SGD, and AED globally.
+            No hidden fees. Your ad budget goes to ads. We charge a fixed flat-rate based on service scope. We accept INR globally.
           </p>
         </motion.div>
 

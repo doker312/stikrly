@@ -2,63 +2,85 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TrustSection from "@/components/TrustSection";
 import Pricing from "@/components/Pricing";
+import DashboardResultsSection from "@/components/DashboardResultsSection";
+import MarketingBreakdown from "@/components/MarketingBreakdown";
+import WhatsAppTestimonials from "@/components/WhatsAppTestimonials";
 import { motion } from "framer-motion";
-import { Search, Megaphone, PieChart, Focus } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-
-const features = [
-  { icon: Megaphone, title: "Meta Ads Strategy", desc: "Hyper-targeted campaigns across Facebook and Instagram driving immediate ROAS." },
-  { icon: Focus, title: "Google Search Intent", desc: "Capturing bottom-of-funnel leads exactly when they are searching for you." },
-  { icon: PieChart, title: "Omnichannel Analytics", desc: "Clean attribution reporting so you know exactly what platform makes you money." }
-];
+import { ArrowRight } from "lucide-react";
 
 const PerformanceMarketing = () => {
   return (
     <>
       <Helmet>
         <title>Performance Marketing Agency | DiziGroww</title>
-        <meta name="description" content="Data-heavy ad campaigns targeting high-intent demographics in Dubai, Singapore, and worldwide." />
+        <meta name="description" content="Data-heavy ad campaigns targeting high-intent demographics pushing pure ROAS." />
       </Helmet>
       
       <Navbar />
-      <main className="pt-20">
-        <section className="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
-          <div className="container-main relative z-10 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              <Search size={16} /> Paid Media Engineering
-            </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-7xl mb-6 tracking-tight">
-              Scale Your Revenue with <br className="hidden md:block" /> <span className="text-primary italic">Predictable Ads.</span>
-            </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              We deploy sophisticated Meta and Google Ads campaigns focused entirely on Customer Acquisition Cost (CAC) and Return on Ad Spend (ROAS).
-            </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap justify-center gap-4">
-              <a href="/#audit-form" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-bold shadow-xl transition-all">Get a Quote</a>
-            </motion.div>
-          </div>
-        </section>
-
-        <TrustSection />
-
-        <section className="section-padding bg-secondary">
-          <div className="container-main text-center">
-            <h2 className="text-3xl md:text-4xl mb-12">Our Advertising Arsenal</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((f, i) => (
-                <div key={i} className="bg-card p-8 rounded-2xl shadow-sm border border-border/50 text-left">
-                  <f.icon className="text-primary mb-4" size={32} />
-                  <h3 className="text-xl font-bold mb-3">{f.title}</h3>
-                  <p className="text-muted-foreground">{f.desc}</p>
-                </div>
-              ))}
+      
+      {/* Container for Z-Axis Stacking Scroll */}
+      <main className="relative pb-24">
+        
+        {/* Layer 0: The Hook / Hero */}
+        <section className="sticky top-[80px] z-[1] min-h-[85vh] flex flex-col justify-center bg-background overflow-hidden border-b border-border/50">
+          <div className="absolute inset-0 bg-primary/5 blur-[100px] rounded-full pointer-events-none w-[600px] h-[600px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
+          <div className="container-main relative z-10 text-center flex flex-col items-center">
+            <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase mb-8 shadow-sm">
+               The Conversion Engine
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-black text-foreground mb-8 tracking-tighter leading-[1.05] drop-shadow-sm max-w-5xl">
+              Stop Paying Agencies <br/>
+              <span className="text-primary">For Meaningless Traffic.</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+              We deploy sophisticated Meta and Google Ads campaigns focused entirely on pure ROAS. We don't track clicks, we track sales.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <a href="/contact" className="w-full sm:w-auto">
+                <button aria-label="Book a Free Call" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-foreground hover:bg-foreground/90 text-background px-10 py-5 rounded-full text-lg font-bold shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  Scale Your Revenue <ArrowRight className="w-5 h-5"/>
+                </button>
+              </a>
             </div>
           </div>
         </section>
 
-        <Pricing />
+        {/* Layer 1: The Trust Validation */}
+        <div className="sticky top-[100px] z-[2] bg-background shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.1)] pt-12 pb-8 rounded-t-[3rem] border-t border-border">
+          <TrustSection />
+        </div>
+
+        {/* Layer 2: The Core Breakdown */}
+        <div className="sticky top-[120px] z-[3] bg-[#f8f9fc] dark:bg-black shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.2)] rounded-t-[3rem] border-t border-border">
+          <MarketingBreakdown />
+        </div>
+
+        {/* Layer 3: Unarguable Results */}
+        <div className="sticky top-[140px] z-[4] bg-background shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.3)] rounded-t-[3rem] border-t border-border">
+          <DashboardResultsSection />
+        </div>
+
+        {/* Layer 4: Raw Social Proof */}
+        <div className="sticky top-[160px] z-[5] bg-secondary shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.4)] rounded-t-[3rem] border-t border-border">
+          <WhatsAppTestimonials />
+        </div>
+
+        {/* Layer 5: The Final Pitch & Pricing */}
+        <div className="sticky top-[180px] z-[6] bg-background shadow-[0_-40px_80px_-20px_rgba(0,0,0,0.5)] rounded-t-[3rem] border-t-2 border-primary/20 pt-16">
+          <div className="text-center mb-8 px-4">
+             <h2 className="text-3xl md:text-5xl font-black mb-4">Start Scaling Today</h2>
+             <p className="text-muted-foreground text-lg">Pick a plan and book your onboarding call directly below.</p>
+          </div>
+          <Pricing />
+        </div>
+
       </main>
-      <Footer />
+      
+      {/* Footer remains at absolute bottom of scroll flow */}
+      <div className="relative z-10 bg-background">
+         <Footer />
+      </div>
     </>
   );
 };

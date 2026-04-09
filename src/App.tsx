@@ -20,7 +20,6 @@ import WordPressDevelopment from "./pages/services/WordPressDevelopment.tsx";
 import LandingPageDesign from "./pages/services/LandingPageDesign.tsx";
 import WebsiteRedesignCRO from "./pages/services/WebsiteRedesignCRO.tsx";
 import PerformanceMarketing from "./pages/services/PerformanceMarketing.tsx";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -51,7 +50,6 @@ const App = () => (
           <Route path="/careers/internships" element={<Internships />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <WhatsAppButton />
         <CookieBanner />
         <Analytics />
       </BrowserRouter>

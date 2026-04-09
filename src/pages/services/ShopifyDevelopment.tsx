@@ -2,63 +2,76 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TrustSection from "@/components/TrustSection";
 import Pricing from "@/components/Pricing";
-import { motion } from "framer-motion";
-import { ShoppingBag, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import WebDevelopmentGlimpse from "@/components/WebDevelopmentGlimpse";
+import MarketingBreakdown from "@/components/MarketingBreakdown";
 import { Helmet } from "react-helmet-async";
-
-const features = [
-  { icon: ShieldCheck, title: "Custom Themes", desc: "Tailored Shopify architectures built for maximum conversion." },
-  { icon: Zap, title: "Speed Optimization", desc: "Lightweight liquid code delivering sub-second load times." },
-  { icon: CheckCircle2, title: "Sales Automation", desc: "Integrate ERPs, CRMs, and email flows." }
-];
+import { ArrowRight } from "lucide-react";
 
 const ShopifyDevelopment = () => {
   return (
     <>
       <Helmet>
         <title>Shopify Development Agency | DiziGroww</title>
-        <meta name="description" content="Scale your e-commerce brand with enterprise-grade Shopify development and optimization." />
+        <meta name="description" content="Scale your e-commerce brand with enterprise-grade Shopify development and CRO optimization." />
       </Helmet>
       
       <Navbar />
-      <main className="pt-20">
-        <section className="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
-          <div className="container-main relative z-10 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              <ShoppingBag size={16} /> Enterprise Shopify Solutions
-            </motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl md:text-5xl lg:text-7xl mb-6 tracking-tight">
-              Build a store that <br className="hidden md:block" /> <span className="text-primary italic">Actually Sells.</span>
-            </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              We design and develop high-converting Shopify stores designed to maximize ROI, load instantly, and scale globally.
-            </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap justify-center gap-4">
-              <a href="/#audit-form" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-bold shadow-xl transition-all">Get a Quote</a>
-            </motion.div>
-          </div>
-        </section>
-
-        <TrustSection />
-
-        <section className="section-padding bg-secondary">
-          <div className="container-main text-center">
-            <h2 className="text-3xl md:text-4xl mb-12">Engineered for E-Commerce Dominance</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((f, i) => (
-                <div key={i} className="bg-card p-8 rounded-2xl shadow-sm border border-border/50 text-left">
-                  <f.icon className="text-primary mb-4" size={32} />
-                  <h3 className="text-xl font-bold mb-3">{f.title}</h3>
-                  <p className="text-muted-foreground">{f.desc}</p>
-                </div>
-              ))}
+      
+      <main className="relative pb-24">
+        
+        {/* Layer 0: Action Hero */}
+        <section className="sticky top-[80px] z-[1] min-h-[85vh] flex flex-col justify-center bg-background overflow-hidden border-b border-border/50">
+          <div className="absolute inset-0 bg-primary/5 blur-[100px] rounded-full pointer-events-none w-[600px] h-[600px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
+          <div className="container-main relative z-10 text-center flex flex-col items-center">
+            <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-bold text-xs tracking-widest uppercase mb-8 shadow-sm">
+               Enterprise E-Commerce
+            </span>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-black text-foreground mb-8 tracking-tighter leading-[1.05] drop-shadow-sm max-w-5xl">
+              Stop Building Websites. <br/>
+              <span className="text-primary">Start Building Funnels.</span>
+            </h1>
+            <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+              We design and develop high-converting Shopify stores architected purely for buying psychology, sub-second load times, and maximum ROAS.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <a href="/contact" className="w-full sm:w-auto">
+                <button aria-label="Book a Free Call" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-foreground hover:bg-foreground/90 text-background px-10 py-5 rounded-full text-lg font-bold shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                  Build Your Digital Store <ArrowRight className="w-5 h-5"/>
+                </button>
+              </a>
             </div>
           </div>
         </section>
 
-        <Pricing />
+        {/* Layer 1: The Trust Validation */}
+        <div className="sticky top-[100px] z-[2] bg-background shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.1)] pt-12 pb-8 rounded-t-[3rem] border-t border-border">
+          <TrustSection />
+        </div>
+
+        {/* Layer 2: The Core WebDev Analysis */}
+        <div className="sticky top-[120px] z-[3] bg-[#f8f9fc] dark:bg-black shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.2)] rounded-t-[3rem] border-t border-border">
+          <WebDevelopmentGlimpse />
+        </div>
+
+        {/* Layer 3: Omnichannel Integration Context */}
+        <div className="sticky top-[140px] z-[4] bg-background shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.3)] rounded-t-[3rem] border-t border-border">
+          <MarketingBreakdown />
+        </div>
+
+        {/* Layer 4: Pricing Integration */}
+        <div className="sticky top-[160px] z-[5] bg-background shadow-[0_-40px_80px_-20px_rgba(0,0,0,0.5)] rounded-t-[3rem] border-t-2 border-primary/20 pt-16">
+          <div className="text-center mb-8 px-4">
+             <h2 className="text-3xl md:text-5xl font-black mb-4">Launch Your Shopify Empire</h2>
+             <p className="text-muted-foreground text-lg">Transparent pricing for high-tier development.</p>
+          </div>
+          <Pricing />
+        </div>
+
       </main>
-      <Footer />
+      
+      <div className="relative z-10 bg-background">
+         <Footer />
+      </div>
     </>
   );
 };
