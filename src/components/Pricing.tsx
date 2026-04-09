@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Full E-com Store",
-    priceUSD: "$290",
+    priceUSD: "$300",
     priceINR: "₹15,000",
     period: " onwards",
     desc: "End-to-end e-commerce development ready for sales.",
@@ -37,7 +37,7 @@ const plans = [
   },
   {
     name: "Meta Ads + Web",
-    priceUSD: "$350",
+    priceUSD: "$400",
     priceINR: "₹20,000",
     period: "/mo",
     desc: "Consistent traffic via Meta ads with a dedicated website.",
@@ -54,7 +54,7 @@ const plans = [
   },
   {
     name: "Omnichannel",
-    priceUSD: "$400",
+    priceUSD: "$500",
     priceINR: "₹25,000",
     period: "/mo",
     desc: "Complete ad management across Meta & Google plus web.",
