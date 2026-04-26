@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Rocket, BookOpen, DollarSign, Globe, MapPin } from "lucide-react";
 import { useState } from "react";
+import { useMeta } from "@/hooks/useMeta";
 
 const values = [
   { icon: Rocket, title: "Real Responsibility", desc: "No busy work. You'll own campaigns and strategy from day one." },
@@ -19,6 +20,10 @@ const roles = [
 ];
 
 const Careers = () => {
+  useMeta({
+    title: "Careers | DiziGroww",
+    description: "Join the DiziGroww team. We are hiring talented performance marketers, content strategists, and web designers."
+  });
   const [form, setForm] = useState({ name: "", email: "", role: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 

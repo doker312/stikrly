@@ -117,7 +117,7 @@ export const generateProposalHtml = (data: ProposalData): string => {
         </div>
         <div class="flex items-start gap-2">
           <div class="text-[#d63864] mt-px">✉️</div>
-          <div class="font-medium text-gray-900">dizigrowwofficial@gmail.com</div>
+          <div class="font-medium text-gray-900">info@dizigroww.in</div>
         </div>
         <div class="flex items-start gap-2">
           <div class="text-[#d63864] mt-px">🌐</div>

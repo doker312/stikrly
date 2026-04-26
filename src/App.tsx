@@ -22,6 +22,7 @@ import WebsiteRedesignCRO from "./pages/services/WebsiteRedesignCRO.tsx";
 import PerformanceMarketing from "./pages/services/PerformanceMarketing.tsx";
 import CookieBanner from "@/components/CookieBanner";
 import { Analytics } from "@vercel/analytics/react";
+import { ScrollToHash } from "@/components/ScrollToHash";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />

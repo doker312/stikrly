@@ -6,7 +6,7 @@ import { Mail, MessageCircle, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "dizigrowwofficial@gmail.com" },
+  { icon: Mail, label: "Email Us", value: "info@dizigroww.in" },
   { icon: MessageCircle, label: "WhatsApp / Phone", value: "+91 9450010826" },
   { icon: MapPin, label: "Location", value: "Greater Noida, UP" },
 ];

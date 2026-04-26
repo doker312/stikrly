@@ -7,13 +7,25 @@ const CookieBanner = () => {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
+    const docCookie = document.cookie.split("; ").find(row => row.startsWith("cookieConsent="));
+    // Check both local storage AND document.cookie to be absolutely sure
+    if (!consent && !docCookie) {
       setIsVisible(true);
+    } else if (consent && !docCookie) {
+      // Sync to cookie if it exists in local storage
+      document.cookie = "cookieConsent=true; max-age=31536000; path=/";
     }
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem("cookieConsent", "true");
+    document.cookie = "cookieConsent=true; max-age=31536000; path=/";
+    setIsVisible(false);
+  };
+
+  const dismissCookies = () => {
+    localStorage.setItem("cookieConsent", "dismissed");
+    document.cookie = "cookieConsent=dismissed; max-age=31536000; path=/";
     setIsVisible(false);
   };
 
@@ -40,7 +52,7 @@ const CookieBanner = () => {
               </div>
             </div>
             <button
-              onClick={() => setIsVisible(false)}
+              onClick={dismissCookies}
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <X size={18} />

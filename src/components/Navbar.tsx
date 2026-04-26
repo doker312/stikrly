@@ -10,7 +10,6 @@ const serviceLinks = [
   { label: "Landing Pages", to: "/services#landing-pages" },
   { label: "Shopify", to: "/services#shopify" },
   { label: "WordPress", to: "/services#wordpress" },
-  { label: "Analytics", to: "/services#analytics" },
 ];
 
 const navLinks = [

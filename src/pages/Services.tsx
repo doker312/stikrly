@@ -4,6 +4,7 @@ import Pricing from "@/components/Pricing";
 import { motion } from "framer-motion";
 import { Facebook, Search, BarChart3, Layout, Globe, ShoppingBag, Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useMeta } from "@/hooks/useMeta";
 
 const services = [
   {
@@ -42,9 +43,15 @@ const steps = [
 
 
 
-const Services = () => (
-  <>
-    <Navbar />
+const Services = () => {
+  useMeta({
+    title: "Our Services | DiziGroww",
+    description: "Explore our premium web development and performance marketing services. We build eCommerce stores, landing pages, and run high-converting ad campaigns."
+  });
+
+  return (
+    <>
+      <Navbar />
     <main className="pt-16">
       {/* Hero */}
       <section className="section-padding bg-secondary">
@@ -112,6 +119,7 @@ const Services = () => (
     </main>
     <Footer />
   </>
-);
+  );
+};
 
 export default Services;
